@@ -24,6 +24,15 @@ class App extends Component {
     });
   }
 
+  componentDidMount() {
+    console.log('component mounted');
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    console.log('component updated');
+    console.log(prevProps, prevState);
+  }
+
   deleteNinja = (id) => {
     let ninjas = this.state.ninjas.filter(ninja => {
       
